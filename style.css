@@ -1,0 +1,35 @@
+/* --- style.css --- */
+
+/* 1. Animation du curseur style Terminal */
+.typing-cursor::after {
+    content: '|';
+    animation: blink 1s step-start infinite;
+    color: #0ea5e9; /* tech-accent color */
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* 2. Effet "Verre dépoli" pour la navigation */
+.glass-nav {
+    background: rgba(15, 23, 42, 0.9); /* tech-bg avec opacité */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+    border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+}
+
+/* 3. Scrollbar personnalisée (Optionnel mais joli) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
