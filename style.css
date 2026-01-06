@@ -1,35 +1,47 @@
 /* --- style.css --- */
 
-/* 1. Animation du curseur style Terminal */
+/* 1. Définition des variables de couleurs (Thème par défaut : DARK) */
+:root {
+    --bg-color: #0f172a;      /* Bleu nuit profond */
+    --card-color: #1e293b;    /* Gris bleu */
+    --text-main: #e2e8f0;     /* Blanc cassé */
+    --text-dim: #94a3b8;      /* Gris clair */
+    --accent: #0ea5e9;        /* Cyan vif */
+    --nav-bg: rgba(15, 23, 42, 0.9);
+    --border-color: #334155;
+}
+
+/* 2. Thème CLAIR (S'active quand l'attribut data-theme="light") */
+[data-theme="light"] {
+    --bg-color: #f1f5f9;      /* Gris très clair (Slate 100) */
+    --card-color: #ffffff;    /* Blanc pur */
+    --text-main: #0f172a;     /* Bleu nuit (Texte foncé) */
+    --text-dim: #64748b;      /* Gris moyen */
+    --accent: #0284c7;        /* Bleu un peu plus foncé pour le contraste */
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --border-color: #e2e8f0;
+}
+
+/* 3. Application des transitions douces pour le changement de thème */
+body, .bg-tech-card, .text-tech-text, .text-tech-dim, nav {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 4. Animation du curseur */
 .typing-cursor::after {
     content: '|';
     animation: blink 1s step-start infinite;
-    color: #0ea5e9; /* tech-accent color */
+    color: var(--accent);
 }
 
 @keyframes blink {
     50% { opacity: 0; }
 }
 
-/* 2. Effet "Verre dépoli" pour la navigation */
+/* 5. Navigation Glassmorphism */
 .glass-nav {
-    background: rgba(15, 23, 42, 0.9); /* tech-bg avec opacité */
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
-    border-bottom: 1px solid rgba(30, 41, 59, 0.5);
-}
-
-/* 3. Scrollbar personnalisée (Optionnel mais joli) */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #0f172a;
-}
-::-webkit-scrollbar-thumb {
-    background: #1e293b;
-    border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #334155;
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
 }
