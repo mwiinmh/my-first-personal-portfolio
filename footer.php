@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="py-8 border-t border-slate-800 text-center text-slate-500 font-mono text-sm">
+<footer class="py-8 border-t border-tech-border text-center text-tech-dim font-mono text-sm bg-tech-bg transition-colors">
     <p>Designé & Développé par <?php echo isset($student_name) ? $student_name : 'Étudiant'; ?> - <?php echo isset($current_year) ? $current_year : '2026'; ?></p>
 
     <div class="mt-2 flex justify-center gap-4">
