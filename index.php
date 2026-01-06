@@ -22,7 +22,7 @@ include 'header.php';
                     Étudiant en BTS SIO option SISR. Passionné par l'infrastructure, la cybersécurité et l'automatisation.
                 </p>
                 <div class="flex gap-4">
-                    <a href="#projects" class="bg-tech-accent text-white font-semibold px-6 py-3 rounded hover:bg-sky-600 transition-colors shadow-lg shadow-tech-accent/20">
+                    <a href="projects.php" class="bg-tech-accent text-white font-semibold px-6 py-3 rounded hover:bg-sky-600 transition-colors shadow-lg shadow-tech-accent/20">
                         Voir mes projets
                     </a>
                     <a href="<?php echo $github_link; ?>" target="_blank" class="px-6 py-3 border border-tech-border text-tech-text rounded hover:border-tech-accent transition-colors flex items-center gap-2">
@@ -123,35 +123,23 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- NOUVELLE SECTION : Expérience (Arbre avec Slide Effect) -->
+    <!-- Expérience Pro (Arbre avec Slide) -->
     <section id="experience" class="py-20 bg-tech-card/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 flex items-center gap-3 text-tech-text">
-                <span class="text-tech-accent font-mono">02.</span> Expériences Professionelles
+                <span class="text-tech-accent font-mono">02.</span> Expériences Professionnelles
             </h2>
 
             <div class="relative">
-                <!-- Le Tronc (Ligne Verticale) -->
                 <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-tech-border"></div>
 
-                <!-- Branche 1 : REDVISE (Alternance) -->
-                <!-- Modification : Suppression de 'group' ici pour éviter le déclenchement global -->
+                <!-- Branche 1 : REDVISE -->
                 <div class="mb-12 flex justify-between items-center w-full right-timeline">
                     <div class="hidden md:block order-1 w-5/12"></div>
-
-                    <!-- Le Noeud -->
                     <div class="z-20 flex items-center order-1 bg-tech-accent shadow-xl w-4 h-4 rounded-full ring-4 ring-tech-bg hover:scale-125 transition-transform duration-300"></div>
-
-                    <!-- La Carte avec Slide Effect -->
-                    <!-- Modification : Ajout de 'group' directement sur la carte et changement du hover border -->
                     <div class="order-1 bg-tech-card rounded-lg shadow-xl w-full md:w-5/12 border border-tech-border hover:border-tech-accent transition-colors relative group">
-                        <!-- Flèche décorative (Hors du overflow hidden) -->
                         <div class="hidden md:block absolute top-1/2 -left-2 w-4 h-4 bg-tech-card border-l border-b border-tech-border group-hover:border-tech-accent transform rotate-45 -translate-y-1/2 transition-colors z-10"></div>
-
-                        <!-- Conteneur interne avec overflow hidden pour l'animation -->
                         <div class="relative overflow-hidden rounded-lg px-6 py-4 h-full">
-
-                            <!-- Contenu Principal (Slide vers le haut au survol) -->
                             <div class="transition-transform duration-500 group-hover:-translate-y-2">
                                 <div class="flex justify-between items-center mb-2">
                                     <h3 class="font-bold text-tech-text text-xl">REDVISE</h3>
@@ -160,39 +148,24 @@ include 'header.php';
                                 <p class="text-sm text-tech-dim font-mono mb-3"><i class="fa-regular fa-calendar mr-2"></i>Septembre 2025 - En cours</p>
                                 <p class="text-tech-dim text-sm leading-relaxed mb-4 group-hover:opacity-20 transition-opacity duration-300">
                                     Apprentissage et mise en pratique des architectures réseaux et systèmes.
-                                    Gestion de l'infrastructure et support technique niveau 2.
                                 </p>
                             </div>
-
-                            <!-- Bouton caché (Slide In depuis le bas) -->
                             <div class="absolute inset-0 flex flex-col justify-end items-center pb-6 bg-gradient-to-t from-tech-card via-tech-card/90 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <button class="bg-tech-accent text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-sky-600 transition-colors shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-500 delay-100">
-                                    En savoir plus <i class="fa-solid fa-arrow-right ml-2"></i>
-                                </button>
+                                <a href="projects.php#alternance" class="bg-tech-accent text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-sky-600 transition-colors shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-500 delay-100">
+                                    Voir les missions <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
-                <!-- Branche 2 : ITIC Paris (Stage) -->
-                <!-- Modification : Suppression de 'group' ici -->
+                <!-- Branche 2 : ITIC Paris -->
                 <div class="mb-8 flex justify-between items-center w-full flex-row-reverse left-timeline">
                     <div class="hidden md:block order-1 w-5/12"></div>
-
-                    <!-- Le Noeud -->
                     <div class="z-20 flex items-center order-1 bg-tech-dim shadow-xl w-4 h-4 rounded-full ring-4 ring-tech-bg hover:scale-125 transition-transform duration-300"></div>
-
-                    <!-- La Carte avec Slide Effect -->
-                    <!-- Modification : Ajout de 'group' directement sur la carte -->
                     <div class="order-1 bg-tech-card rounded-lg shadow-xl w-full md:w-5/12 border border-tech-border hover:border-tech-accent transition-colors relative group">
-                        <!-- Flèche décorative -->
                         <div class="hidden md:block absolute top-1/2 -right-2 w-4 h-4 bg-tech-card border-r border-t border-tech-border group-hover:border-tech-accent transform rotate-45 -translate-y-1/2 transition-colors z-10"></div>
-
-                        <!-- Conteneur interne avec overflow hidden -->
                         <div class="relative overflow-hidden rounded-lg px-6 py-4 h-full">
-
-                            <!-- Contenu Principal -->
                             <div class="transition-transform duration-500 group-hover:-translate-y-2">
                                 <div class="flex justify-between items-center mb-2">
                                     <h3 class="font-bold text-tech-text text-xl">ITIC Paris</h3>
@@ -200,17 +173,14 @@ include 'header.php';
                                 </div>
                                 <p class="text-sm text-tech-dim font-mono mb-3"><i class="fa-regular fa-calendar mr-2"></i>Mai 2025 - Juillet 2025</p>
                                 <p class="text-tech-dim text-sm leading-relaxed mb-4 group-hover:opacity-20 transition-opacity duration-300">
-                                    Première expérience significative. Maintenance du parc informatique pédagogique et assistance aux utilisateurs.
+                                    Maintenance du parc informatique pédagogique et assistance utilisateurs.
                                 </p>
                             </div>
-
-                            <!-- Bouton caché -->
                             <div class="absolute inset-0 flex flex-col justify-end items-center pb-6 bg-gradient-to-t from-tech-card via-tech-card/90 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                                <button class="bg-tech-dim text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-slate-600 transition-colors shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-500 delay-100">
-                                    En savoir plus <i class="fa-solid fa-arrow-right ml-2"></i>
-                                </button>
+                                <a href="projects.php#stage" class="bg-tech-dim text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-slate-600 transition-colors shadow-lg transform translate-y-4 group-hover:translate-y-0 duration-500 delay-100">
+                                    Voir les missions <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -219,78 +189,29 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-tech-card/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3 text-tech-text">
+    <!-- NOUVELLE SECTION : TEASER PROJETS -->
+    <section id="projects-teaser" class="py-24 bg-tech-bg">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 flex justify-center items-center gap-3 text-tech-text">
                 <span class="text-tech-accent font-mono">03.</span> Projets & Missions
             </h2>
+            <p class="text-tech-dim text-lg mb-10">
+                J'ai regroupé l'ensemble de mes documentations techniques, projets d'école et missions d'entreprise sur une page dédiée.
+                Accédez à tous les détails de mes réalisations.
+            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Project 1 -->
-                <div class="bg-tech-card rounded-xl overflow-hidden border border-tech-border hover:shadow-xl hover:shadow-tech-accent/10 transition-all">
-                    <div class="h-48 bg-tech-bg flex items-center justify-center border-b border-tech-border">
-                        <i class="fa-solid fa-sitemap text-4xl text-tech-dim"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold mb-2 text-tech-text">Refonte Infra Réseau</h3>
-                        <p class="text-tech-dim text-sm mb-4">Mise en place de VLANs et sécurisation des accès switchs.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs font-mono bg-tech-bg text-tech-accent border border-tech-border px-2 py-1 rounded">Cisco</span>
-                            <span class="text-xs font-mono bg-tech-bg text-tech-accent border border-tech-border px-2 py-1 rounded">VLAN</span>
-                        </div>
-                        <a href="#" class="text-sm font-semibold text-tech-text hover:text-tech-accent flex items-center gap-2">
-                            Voir détails <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="bg-tech-card rounded-xl overflow-hidden border border-tech-border hover:shadow-xl hover:shadow-tech-accent/10 transition-all">
-                    <div class="h-48 bg-tech-bg flex items-center justify-center border-b border-tech-border">
-                        <i class="fa-solid fa-ticket text-4xl text-tech-dim"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold mb-2 text-tech-text">Déploiement GLPI</h3>
-                        <p class="text-tech-dim text-sm mb-4">Installation serveur GLPI sur Debian 11 pour gestion de parc.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs font-mono bg-tech-bg text-tech-accent border border-tech-border px-2 py-1 rounded">Linux</span>
-                            <span class="text-xs font-mono bg-tech-bg text-tech-accent border border-tech-border px-2 py-1 rounded">GLPI</span>
-                        </div>
-                        <a href="#" class="text-sm font-semibold text-tech-text hover:text-tech-accent flex items-center gap-2">
-                            Voir détails <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-tech-card rounded-xl overflow-hidden border border-tech-border hover:shadow-xl hover:shadow-tech-accent/10 transition-all">
-                    <div class="h-48 bg-tech-bg flex items-center justify-center border-b border-tech-border">
-                        <i class="fa-solid fa-users-gear text-4xl text-tech-dim"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold mb-2 text-tech-text">Active Directory</h3>
-                        <p class="text-tech-dim text-sm mb-4">Configuration contrôleur de domaine et GPO.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs font-mono bg-tech-bg text-tech-accent border border-tech-border px-2 py-1 rounded">Windows</span>
-                            <span class="text-xs font-mono bg-tech-bg text-tech-accent border border-tech-border px-2 py-1 rounded">AD</span>
-                        </div>
-                        <a href="#" class="text-sm font-semibold text-tech-text hover:text-tech-accent flex items-center gap-2">
-                            Voir détails <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+            <a href="projects.php" class="inline-flex items-center gap-3 bg-tech-accent text-white font-bold py-4 px-8 rounded-full hover:bg-sky-600 transition-all shadow-lg hover:shadow-tech-accent/30 hover:-translate-y-1">
+                <i class="fa-solid fa-folder-open"></i>
+                Accéder au Portfolio des Projets
+            </a>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-20 bg-tech-card/30">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-6 flex justify-center items-center gap-3 text-tech-text">
-                <span class="text-tech-accent font-mono">03.</span> Contact
+                <span class="text-tech-accent font-mono">04.</span> Contact
             </h2>
 
             <form class="space-y-4 text-left max-w-md mx-auto">
