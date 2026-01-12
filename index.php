@@ -126,7 +126,7 @@ include 'header.php';
     <section id="experience" class="py-20 bg-tech-card/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 flex items-center gap-3 text-tech-text">
-                <span class="text-tech-accent font-mono">02.</span> Expérience Pro
+                <span class="text-tech-accent font-mono">02.</span> Expérience Professionnelle
             </h2>
 
             <div class="relative">

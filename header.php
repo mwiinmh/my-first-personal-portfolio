@@ -51,7 +51,7 @@
                     <a href="index.php#skills" class="hover:text-tech-accent transition-colors">Compétences</a>
                     <!-- Ajout du lien Expérience ici -->
                     <a href="index.php#experience" class="hover:text-tech-accent transition-colors">Expérience</a>
-                    <a href="index.php#projects" class="hover:text-tech-accent transition-colors">Projets</a>
+                    <a href="projects.php#projects" class="hover:text-tech-accent transition-colors">Projets</a>
                     <a href="index.php#contact" class="hover:text-tech-accent transition-colors">Contact</a>
                 </div>
 

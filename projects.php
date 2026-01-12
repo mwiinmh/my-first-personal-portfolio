@@ -8,7 +8,7 @@ include 'header.php';
         <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(var(--text-dim) 1px, transparent 1px); background-size: 24px 24px;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-tech-text mb-6">
-                Projets & <span class="text-tech-accent">Contexte Pro</span>
+                Projets & <span class="text-tech-accent">Missions</span>
             </h1>
             <p class="text-xl text-tech-dim max-w-2xl mx-auto">
                 Présentation détaillée des entreprises d'accueil et accès aux rapports de missions.
@@ -200,8 +200,8 @@ include 'header.php';
                     <i class="fa-solid fa-school text-2xl"></i>
                 </div>
                 <div>
-                    <h2 class="text-3xl font-bold text-tech-text">Projets École (BTS SIO)</h2>
-                    <p class="text-tech-dim font-mono text-sm">Parcours de formation & Examens</p>
+                    <h2 class="text-3xl font-bold text-tech-text">Formation</h2>
+                    <p class="text-tech-dim font-mono text-sm">Parcours de formation durant les deux années de BTS</p>
                 </div>
             </div>
 
@@ -219,7 +219,7 @@ include 'header.php';
                         </div>
                         <h3 class="text-xl font-bold text-tech-text mb-2">Ateliers Systèmes</h3>
                         <p class="text-tech-dim text-sm mb-6 leading-relaxed">
-                            Administration Windows Server, Linux (Debian/CentOS), Scripting Bash/PowerShell et Services associés.
+                            Administration Windows Server, Linux (Debian/Ubuntu), Scripting Bash/PowerShell et Services associés.
                         </p>
                         <a href="details.php?id=sio_sys" class="inline-flex items-center text-blue-400 font-bold text-sm hover:text-blue-300 transition-colors">
                             Voir les ateliers <i class="fa-solid fa-arrow-right ml-2"></i>
@@ -238,7 +238,7 @@ include 'header.php';
                         </div>
                         <h3 class="text-xl font-bold text-tech-text mb-2">Ateliers Réseaux</h3>
                         <p class="text-tech-dim text-sm mb-6 leading-relaxed">
-                            Architecture Cisco (Switching/Routing), VLANs, ACLs, Firewalling et protocoles réseaux.
+                            Architecture Mikrotik (Switching/Routing), VLANs, Firewalling et protocoles réseaux.
                         </p>
                         <a href="details.php?id=sio_net" class="inline-flex items-center text-orange-400 font-bold text-sm hover:text-orange-300 transition-colors">
                             Voir les ateliers <i class="fa-solid fa-arrow-right ml-2"></i>
