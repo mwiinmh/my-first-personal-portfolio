@@ -43,12 +43,11 @@ include 'header.php';
                         <p><span class="text-green-400">user@debian:~$</span> whoami</p>
                         <p class="text-tech-accent"><?php echo $student_name; ?></p>
                         <br>
-                        <p><span class="text-green-400">user@debian:~$</span> cat skills.txt</p>
-                        <p>> Linux (Debian, Ubuntu)</p>
-                        <p>> Windows Server (AD, DNS, DHCP, GPO)</p>
-                        <p>> Réseaux (Mikrotik, VLAN, RIP)</p>
+                        <p><span class="text-green-400">user@debian:~$</span> ./show_experience.sh --tree</p>
+                        <p>> Chargement de l'arbre professionnel...</p>
+                        <p>> [SUCCESS] 2 expériences trouvées.</p>
                         <br>
-                        <p><span class="text-green-400">user@debian:~$</span> ./start_portfolio.sh<span class="typing-cursor"></span></p>
+                        <p><span class="text-green-400">user@debian:~$</span> <span class="typing-cursor"></span></p>
                     </div>
                 </div>
             </div>
@@ -127,7 +126,7 @@ include 'header.php';
     <section id="experience" class="py-20 bg-tech-card/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold mb-12 flex items-center gap-3 text-tech-text">
-                <span class="text-tech-accent font-mono">02.</span> Expériences Professionnelles
+                <span class="text-tech-accent font-mono">02.</span> Expérience Pro
             </h2>
 
             <div class="relative">
@@ -171,7 +170,7 @@ include 'header.php';
                                     <h3 class="font-bold text-tech-text text-xl">ITIC Paris</h3>
                                     <span class="bg-tech-dim/10 text-tech-dim text-xs font-mono px-2 py-1 rounded">Stage</span>
                                 </div>
-                                <p class="text-sm text-tech-dim font-mono mb-3"><i class="fa-regular fa-calendar mr-2"></i>Mai 2025 - Juillet 2025</p>
+                                <p class="text-sm text-tech-dim font-mono mb-3"><i class="fa-regular fa-calendar mr-2"></i>Mai 2025 - Juillet 2025 </p>
                                 <p class="text-tech-dim text-sm leading-relaxed mb-4 group-hover:opacity-20 transition-opacity duration-300">
                                     Maintenance du parc informatique pédagogique et assistance utilisateurs.
                                 </p>
@@ -189,11 +188,67 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- NOUVELLE SECTION : TEASER PROJETS -->
+    <!-- NOUVELLE SECTION : Parcours Scolaire (Avec Animation Scroll) -->
+    <section id="education" class="py-20 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-16 flex items-center justify-center gap-3 text-tech-text scroll-animate opacity-0 translate-y-10 transition-all duration-700">
+                <span class="text-tech-accent font-mono">03.</span> Parcours Scolaire
+            </h2>
+
+            <div class="relative border-l-2 border-tech-border ml-3 md:ml-6 space-y-12">
+
+                <!-- Diplôme 1 : BTS (Le plus récent) -->
+                <div class="relative pl-8 md:pl-12 scroll-animate opacity-0 translate-y-10 transition-all duration-700 delay-100">
+                    <!-- Icone Timeline -->
+                    <span class="absolute -left-[9px] md:-left-[11px] top-0 bg-tech-bg border-2 border-tech-accent w-5 h-5 md:w-6 md:h-6 rounded-full"></span>
+
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-tech-text">BTS SIO option SISR</h3>
+                        <span class="text-tech-accent font-mono text-sm bg-tech-accent/10 px-2 py-1 rounded w-fit mt-1 md:mt-0">2024 - 2026 (En cours)</span>
+                    </div>
+                    <p class="text-tech-text font-semibold mb-2">ITIC Paris, France</p>
+                    <p class="text-tech-dim text-sm leading-relaxed">
+                        Solutions d'Infrastructure, Systèmes et Réseaux. Spécialisation en administration systèmes sécurisés et architecture réseau.
+                    </p>
+                </div>
+
+                <!-- Diplôme 2 : Bachelor -->
+                <div class="relative pl-8 md:pl-12 scroll-animate opacity-0 translate-y-10 transition-all duration-700 delay-200">
+                    <span class="absolute -left-[9px] md:-left-[11px] top-0 bg-tech-bg border-2 border-tech-dim w-5 h-5 md:w-6 md:h-6 rounded-full"></span>
+
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-tech-text">Bachelor Génie Électrique & Électronique</h3>
+                        <span class="text-tech-dim font-mono text-sm bg-tech-card px-2 py-1 rounded w-fit mt-1 md:mt-0">2022</span>
+                    </div>
+                    <p class="text-tech-text font-semibold mb-2">Mahsa University, Malaisie</p>
+                    <p class="text-tech-dim text-sm leading-relaxed">
+                        Formation internationale technique axée sur l'électronique embarquée et les systèmes électriques.
+                    </p>
+                </div>
+
+                <!-- Diplôme 3 : BAC -->
+                <div class="relative pl-8 md:pl-12 scroll-animate opacity-0 translate-y-10 transition-all duration-700 delay-300">
+                    <span class="absolute -left-[9px] md:-left-[11px] top-0 bg-tech-bg border-2 border-tech-dim w-5 h-5 md:w-6 md:h-6 rounded-full"></span>
+
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-tech-text">Bac Scientifique (Série D)</h3>
+                        <span class="text-tech-dim font-mono text-sm bg-tech-card px-2 py-1 rounded w-fit mt-1 md:mt-0">2019</span>
+                    </div>
+                    <p class="text-tech-text font-semibold mb-2">Groupe Scolaire L'Olivier, Comores</p>
+                    <p class="text-tech-dim text-sm leading-relaxed">
+                        Obtention du baccalauréat scientifique
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION : TEASER PROJETS -->
     <section id="projects-teaser" class="py-24 bg-tech-bg">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6 flex justify-center items-center gap-3 text-tech-text">
-                <span class="text-tech-accent font-mono">03.</span> Projets & Missions
+                <span class="text-tech-accent font-mono">04.</span> Projets & Missions
             </h2>
             <p class="text-tech-dim text-lg mb-10">
                 J'ai regroupé l'ensemble de mes documentations techniques, projets d'école et missions d'entreprise sur une page dédiée.
@@ -211,7 +266,7 @@ include 'header.php';
     <section id="contact" class="py-20 bg-tech-card/30">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-6 flex justify-center items-center gap-3 text-tech-text">
-                <span class="text-tech-accent font-mono">04.</span> Contact
+                <span class="text-tech-accent font-mono">05.</span> Contact
             </h2>
 
             <form class="space-y-4 text-left max-w-md mx-auto">
@@ -229,5 +284,29 @@ include 'header.php';
             </form>
         </div>
     </section>
+
+    <!-- Script Animation au Scroll (Intersection Observer) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // L'animation se déclenche quand 10% de l'élément est visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        observer.unobserve(entry.target); // On arrête d'observer une fois animé
+                    }
+                });
+            }, observerOptions);
+
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+            scrollElements.forEach((el) => observer.observe(el));
+        });
+    </script>
 
 <?php include 'footer.php'; ?>
