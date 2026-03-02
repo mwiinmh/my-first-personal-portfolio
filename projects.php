@@ -8,7 +8,7 @@ include 'header.php';
         <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(var(--text-dim) 1px, transparent 1px); background-size: 24px 24px;"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-tech-text mb-6">
-                Projets & <span class="text-tech-accent">Missions</span>
+                Projets &amp; <span class="text-tech-accent">Missions</span>
             </h1>
             <p class="text-xl text-tech-dim max-w-2xl mx-auto">
                 Présentation détaillée des entreprises d'accueil et accès aux rapports de missions.
@@ -20,34 +20,30 @@ include 'header.php';
     <section id="alternance" class="py-16 border-b border-tech-border/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- En-tête Section -->
             <div class="flex items-center gap-4 mb-8">
                 <div class="bg-purple-500/10 p-3 rounded-lg border border-purple-500/20 text-purple-400">
                     <i class="fa-solid fa-briefcase text-2xl"></i>
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-tech-text">Alternance chez REDVISE</h2>
-                    <p class="text-tech-dim font-mono text-sm">Administrateur Système & Réseau Junior</p>
+                    <p class="text-tech-dim font-mono text-sm">Administrateur Système &amp; Réseau Junior</p>
                 </div>
             </div>
 
-            <!-- CARTE PRÉSENTATION ENTREPRISE -->
             <div class="bg-tech-card/50 rounded-2xl border border-tech-border p-6 md:p-8 mb-12 shadow-lg hover:shadow-purple-500/10 transition-all duration-500">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-                    <!-- Colonne Gauche : Logo & Info -->
                     <div class="lg:col-span-5 space-y-6">
-                        <!-- Logo Entreprise -->
                         <div class="h-48 bg-white rounded-xl overflow-hidden relative border border-tech-border group flex items-center justify-center p-4">
-                            <!-- Image locale : Assure-toi d'avoir l'image dans un dossier 'img' -->
-                            <img src="img/logo_redvise.png" onerror="this.src='https://via.placeholder.com/600x400/ffffff/0f172a?text=Logo+REDVISE'" alt="Logo REDVISE" class="max-w-full max-h-full object-contain transition-transform group-hover:scale-105">
+                            <img src="img/logo_redvise.png"
+                                 onerror="this.src='https://via.placeholder.com/600x400/ffffff/0f172a?text=Logo+REDVISE'"
+                                 alt="Logo REDVISE"
+                                 class="max-w-full max-h-full object-contain transition-transform group-hover:scale-105">
                         </div>
-
-                        <!-- Fiche d'identité -->
                         <div class="grid grid-cols-2 gap-4 text-sm">
                             <div class="bg-tech-bg p-3 rounded border border-tech-border">
                                 <span class="block text-tech-dim text-xs mb-1">Secteur</span>
-                                <span class="text-tech-text font-semibold">Conseil & Services IT</span>
+                                <span class="text-tech-text font-semibold">Conseil &amp; Services IT</span>
                             </div>
                             <div class="bg-tech-bg p-3 rounded border border-tech-border">
                                 <span class="block text-tech-dim text-xs mb-1">Effectif</span>
@@ -56,7 +52,6 @@ include 'header.php';
                         </div>
                     </div>
 
-                    <!-- Colonne Droite : Activité & Organigramme -->
                     <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
                         <div>
                             <h3 class="text-xl font-bold text-tech-text mb-3 flex items-center gap-2">
@@ -67,26 +62,23 @@ include 'header.php';
                             </p>
                             <h4 class="font-bold text-tech-text mb-2 text-sm">Mon rôle :</h4>
                             <p class="text-tech-dim text-sm">
-                                Intégré au pôle "Infra & Sécurité", je participe au maintien en condition opérationnelle (MCO) des serveurs clients et aux projets de migration.
+                                Intégré au pôle "Infra &amp; Sécurité", je participe au maintien en condition opérationnelle (MCO) des serveurs clients et aux projets de migration.
                             </p>
                         </div>
 
-                        <!-- Organigramme Simplifié -->
                         <div class="bg-tech-bg rounded-xl p-4 border border-tech-border">
                             <h3 class="text-sm font-bold text-tech-text mb-4 flex items-center gap-2">
                                 <i class="fa-solid fa-sitemap text-purple-400"></i> Organigramme du service
                             </h3>
                             <div class="flex flex-col items-center text-xs font-mono">
-                                <!-- Niveau 1 -->
                                 <div class="bg-tech-card border border-purple-500/30 text-purple-300 px-4 py-2 rounded mb-2">DSI (Directeur Technique)</div>
                                 <div class="h-4 w-0.5 bg-tech-border mb-2"></div>
-                                <!-- Niveau 2 -->
                                 <div class="flex gap-4">
                                     <div class="flex flex-col items-center">
                                         <div class="bg-tech-card border border-tech-border text-tech-dim px-3 py-1 rounded">Resp. Support</div>
                                     </div>
                                     <div class="flex flex-col items-center">
-                                        <div class="bg-tech-card border border-tech-border text-tech-text px-3 py-1 rounded font-bold border-purple-500/50">Admin Sys & Réseaux (Tuteur)</div>
+                                        <div class="bg-tech-card border border-tech-border text-tech-text px-3 py-1 rounded font-bold border-purple-500/50">Admin Sys &amp; Réseaux (Tuteur)</div>
                                         <div class="h-4 w-0.5 bg-tech-border my-1"></div>
                                         <div class="bg-purple-500/20 border border-purple-500 text-purple-300 px-3 py-1 rounded shadow-[0_0_10px_rgba(168,85,247,0.2)]">Moi (Alternant)</div>
                                     </div>
@@ -100,11 +92,10 @@ include 'header.php';
                 </div>
             </div>
 
-            <!-- Bouton d'action -->
             <div class="text-center">
                 <a href="details.php?id=redvise" class="inline-flex items-center gap-3 bg-purple-600/10 border border-purple-500 text-purple-400 font-bold py-3 px-8 rounded-full hover:bg-purple-600 hover:text-white transition-all shadow-lg hover:shadow-purple-500/30">
                     <i class="fa-solid fa-folder-open"></i>
-                    Voir les missions & détails techniques
+                    Voir les missions &amp; détails techniques
                 </a>
             </div>
         </div>
@@ -120,21 +111,20 @@ include 'header.php';
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-tech-text">Stage chez ITIC Paris</h2>
-                    <p class="text-tech-dim font-mono text-sm">Technicien Support & Réseau</p>
+                    <p class="text-tech-dim font-mono text-sm">Technicien Support &amp; Réseau</p>
                 </div>
             </div>
 
-            <!-- CARTE PRÉSENTATION ENTREPRISE -->
             <div class="bg-tech-card/50 rounded-2xl border border-tech-border p-6 md:p-8 mb-12 shadow-lg hover:shadow-green-500/10 transition-all duration-500">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                     <div class="lg:col-span-5 space-y-6">
-                        <!-- Logo Entreprise -->
                         <div class="h-48 bg-white rounded-xl overflow-hidden relative border border-tech-border group flex items-center justify-center p-4">
-                            <!-- Image locale -->
-                            <img src="img/logo_itic.png" onerror="this.src='https://via.placeholder.com/600x400/ffffff/0f172a?text=Logo+ITIC'" alt="Logo ITIC Paris" class="max-w-full max-h-full object-contain transition-transform group-hover:scale-105">
+                            <img src="img/logo_itic.png"
+                                 onerror="this.src='https://via.placeholder.com/600x400/ffffff/0f172a?text=Logo+ITIC'"
+                                 alt="Logo ITIC Paris"
+                                 class="max-w-full max-h-full object-contain transition-transform group-hover:scale-105">
                         </div>
-
                         <div class="grid grid-cols-2 gap-4 text-sm">
                             <div class="bg-tech-bg p-3 rounded border border-tech-border">
                                 <span class="block text-tech-dim text-xs mb-1">Type</span>
@@ -182,11 +172,10 @@ include 'header.php';
                 </div>
             </div>
 
-            <!-- Bouton d'action -->
             <div class="text-center">
                 <a href="details.php?id=itic" class="inline-flex items-center gap-3 bg-green-600/10 border border-green-500 text-green-400 font-bold py-3 px-8 rounded-full hover:bg-green-600 hover:text-white transition-all shadow-lg hover:shadow-green-500/30">
                     <i class="fa-solid fa-folder-open"></i>
-                    Voir les missions & détails techniques
+                    Voir les missions &amp; détails techniques
                 </a>
             </div>
         </div>
@@ -205,10 +194,9 @@ include 'header.php';
                 </div>
             </div>
 
-            <!-- Grille Ateliers Systèmes & Réseaux -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 
-                <!-- Carte Systèmes -->
+                <!-- Ateliers Systèmes -->
                 <div class="bg-tech-card/30 rounded-xl border border-tech-border p-6 hover:border-blue-500/50 transition-all group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                         <i class="fa-brands fa-linux text-8xl"></i>
@@ -227,7 +215,7 @@ include 'header.php';
                     </div>
                 </div>
 
-                <!-- Carte Réseaux -->
+                <!-- Ateliers Réseaux -->
                 <div class="bg-tech-card/30 rounded-xl border border-tech-border p-6 hover:border-orange-500/50 transition-all group relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                         <i class="fa-solid fa-network-wired text-8xl"></i>
@@ -247,13 +235,11 @@ include 'header.php';
                 </div>
             </div>
 
-            <!-- Bloc Examens BTS (Nouveau) -->
+            <!-- Examens BTS -->
             <div class="bg-gradient-to-br from-tech-card to-tech-bg rounded-2xl border border-tech-accent/30 p-8 md:p-10 shadow-lg relative overflow-hidden group">
-                <!-- Déco fond -->
                 <div class="absolute -right-10 -bottom-10 opacity-5 group-hover:opacity-10 transition-opacity">
                     <i class="fa-solid fa-file-signature text-9xl"></i>
                 </div>
-
                 <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
                     <div class="flex-1 text-center md:text-left">
                         <h3 class="text-2xl font-bold text-tech-text mb-3 flex items-center justify-center md:justify-start gap-3">

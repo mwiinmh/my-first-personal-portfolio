@@ -1,33 +1,41 @@
 /* --- style.css --- */
 
-/* 1. Définition des variables de couleurs (Thème par défaut : DARK) */
+/* ═══════════════════════════════════════════════════════
+   1. Variables de couleurs — Thème DARK (défaut)
+   ═══════════════════════════════════════════════════════ */
 :root {
-    --bg-color: #0f172a;      /* Bleu nuit profond */
-    --card-color: #1e293b;    /* Gris bleu */
-    --text-main: #e2e8f0;     /* Blanc cassé */
-    --text-dim: #94a3b8;      /* Gris clair */
-    --accent: #0ea5e9;        /* Cyan vif */
-    --nav-bg: rgba(15, 23, 42, 0.9);
-    --border-color: #334155;
+    --bg-color:    #0f172a;
+    --card-color:  #1e293b;
+    --text-main:   #e2e8f0;
+    --text-dim:    #94a3b8;
+    --accent:      #0ea5e9;
+    --nav-bg:      rgba(15, 23, 42, 0.9);
+    --border-color:#334155;
 }
 
-/* 2. Thème CLAIR (S'active quand l'attribut data-theme="light") */
+/* ═══════════════════════════════════════════════════════
+   2. Thème CLAIR
+   ═══════════════════════════════════════════════════════ */
 [data-theme="light"] {
-    --bg-color: #f1f5f9;      /* Gris très clair (Slate 100) */
-    --card-color: #ffffff;    /* Blanc pur */
-    --text-main: #0f172a;     /* Bleu nuit (Texte foncé) */
-    --text-dim: #64748b;      /* Gris moyen */
-    --accent: #0284c7;        /* Bleu un peu plus foncé pour le contraste */
-    --nav-bg: rgba(255, 255, 255, 0.9);
-    --border-color: #e2e8f0;
+    --bg-color:    #f1f5f9;
+    --card-color:  #ffffff;
+    --text-main:   #0f172a;
+    --text-dim:    #64748b;
+    --accent:      #0284c7;
+    --nav-bg:      rgba(255, 255, 255, 0.9);
+    --border-color:#e2e8f0;
 }
 
-/* 3. Application des transitions douces pour le changement de thème */
+/* ═══════════════════════════════════════════════════════
+   3. Transitions globales
+   ═══════════════════════════════════════════════════════ */
 body, .bg-tech-card, .text-tech-text, .text-tech-dim, nav {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* 4. Animation du curseur */
+/* ═══════════════════════════════════════════════════════
+   4. Animation curseur clignotant
+   ═══════════════════════════════════════════════════════ */
 .typing-cursor::after {
     content: '|';
     animation: blink 1s step-start infinite;
@@ -38,10 +46,48 @@ body, .bg-tech-card, .text-tech-text, .text-tech-dim, nav {
     50% { opacity: 0; }
 }
 
-/* 5. Navigation Glassmorphism */
+/* ═══════════════════════════════════════════════════════
+   5. Navigation glassmorphism
+   ═══════════════════════════════════════════════════════ */
 .glass-nav {
     background: var(--nav-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* ═══════════════════════════════════════════════════════
+   6. Safelist couleurs dynamiques (details.php)
+      Tailwind CDN ne génère pas les classes construites
+      dynamiquement en PHP — on les force ici.
+   ═══════════════════════════════════════════════════════ */
+
+/* Purple (REDVISE) */
+.text-purple-400              { color: #c084fc; }
+.bg-purple-500\/10            { background-color: rgb(168 85 247 / 0.10); }
+.border-purple-500\/20        { border-color:     rgb(168 85 247 / 0.20); }
+.hover\:shadow-purple-500\/10:hover { --tw-shadow-color: rgb(168 85 247 / 0.10); }
+
+/* Green (ITIC) */
+.text-green-400               { color: #4ade80; }
+.bg-green-500\/10             { background-color: rgb(34 197 94 / 0.10); }
+.border-green-500\/20         { border-color:     rgb(34 197 94 / 0.20); }
+.hover\:shadow-green-500\/10:hover  { --tw-shadow-color: rgb(34 197 94 / 0.10); }
+
+/* Blue (Ateliers Systèmes) */
+.text-blue-400                { color: #60a5fa; }
+.bg-blue-500\/10              { background-color: rgb(59 130 246 / 0.10); }
+.border-blue-500\/20          { border-color:     rgb(59 130 246 / 0.20); }
+.hover\:shadow-blue-500\/10:hover   { --tw-shadow-color: rgb(59 130 246 / 0.10); }
+
+/* Orange (Ateliers Réseaux) */
+.text-orange-400              { color: #fb923c; }
+.bg-orange-500\/10            { background-color: rgb(249 115 22 / 0.10); }
+.border-orange-500\/20        { border-color:     rgb(249 115 22 / 0.20); }
+.hover\:shadow-orange-500\/10:hover { --tw-shadow-color: rgb(249 115 22 / 0.10); }
+
+/* Yellow (Examens BTS) */
+.text-yellow-400              { color: #facc15; }
+.bg-yellow-500\/10            { background-color: rgb(234 179 8 / 0.10); }
+.border-yellow-500\/20        { border-color:     rgb(234 179 8 / 0.20); }
+.hover\:shadow-yellow-500\/10:hover { --tw-shadow-color: rgb(234 179 8 / 0.10); }

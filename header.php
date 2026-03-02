@@ -10,17 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Config Tailwind utilisant les variables CSS -->
     <script>
         tailwind.config = {
-            darkMode: ['class', '[data-theme="dark"]'], // Support manuel du dark mode
+            darkMode: ['class', '[data-theme="dark"]'],
             theme: {
                 extend: {
                     colors: {
-                        'tech-bg': 'var(--bg-color)',
-                        'tech-card': 'var(--card-color)',
-                        'tech-text': 'var(--text-main)',
-                        'tech-dim': 'var(--text-dim)',
+                        'tech-bg':     'var(--bg-color)',
+                        'tech-card':   'var(--card-color)',
+                        'tech-text':   'var(--text-main)',
+                        'tech-dim':    'var(--text-dim)',
                         'tech-accent': 'var(--accent)',
                         'tech-border': 'var(--border-color)',
                     },
@@ -35,64 +34,118 @@
 </head>
 <body class="bg-tech-bg text-tech-text font-sans antialiased selection:bg-tech-accent selection:text-white transition-colors duration-300">
 
-<!-- Navigation -->
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+function nav_link_class(string $page, string $current): string {
+    return $current === $page
+            ? 'text-tech-accent font-semibold transition-colors'
+            : 'text-tech-dim hover:text-tech-accent transition-colors';
+}
+?>
+
 <nav class="fixed w-full top-0 z-50 glass-nav transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
+
             <!-- Logo -->
             <div class="flex-shrink-0 font-mono font-bold text-xl text-tech-accent">
-                <a href="index.php"><span class="text-tech-text">&lt;</span>Portfolio de Mwindjou<span class="text-tech-text">/&gt;</span></a>
+                <a href="index.php">
+                    <span class="text-tech-text">&lt;</span>Portfolio de Mwindjou<span class="text-tech-text">/&gt;</span>
+                </a>
             </div>
 
-            <!-- Menu -->
+            <!-- Menu Desktop -->
             <div class="hidden md:flex items-center space-x-8">
                 <div class="flex items-baseline space-x-8 font-mono text-sm">
-                    <a href="index.php#home" class="hover:text-tech-accent transition-colors">Accueil</a>
-                    <a href="index.php#skills" class="hover:text-tech-accent transition-colors">Compétences</a>
-                    <!-- Ajout du lien Expérience ici -->
-                    <a href="index.php#experience" class="hover:text-tech-accent transition-colors">Expérience</a>
-                    <a href="projects.php#projects" class="hover:text-tech-accent transition-colors">Projets</a>
-                    <a href="index.php#contact" class="hover:text-tech-accent transition-colors">Contact</a>
+                    <a href="index.php#home"       class="<?php echo nav_link_class('index.php',    $current_page); ?>">Accueil</a>
+                    <a href="index.php#skills"     class="<?php echo nav_link_class('index.php',    $current_page); ?>">Compétences</a>
+                    <a href="index.php#experience" class="<?php echo nav_link_class('index.php',    $current_page); ?>">Expérience</a>
+                    <a href="projects.php"         class="<?php echo nav_link_class('projects.php', $current_page); ?>">Projets</a>
+                    <a href="index.php#contact"    class="<?php echo nav_link_class('index.php',    $current_page); ?>">Contact</a>
                 </div>
-
-                <!-- Bouton Dark/Light Mode -->
                 <button id="theme-toggle" class="p-2 rounded-full border border-tech-border hover:border-tech-accent text-tech-accent transition-all w-10 h-10 flex items-center justify-center">
                     <i class="fa-solid fa-sun hidden" id="icon-light"></i>
-                    <i class="fa-solid fa-moon" id="icon-dark"></i>
+                    <i class="fa-solid fa-moon"       id="icon-dark"></i>
                 </button>
             </div>
+
+            <!-- Mobile : thème + hamburger -->
+            <div class="md:hidden flex items-center gap-3">
+                <button id="theme-toggle-mobile" class="p-2 rounded-full border border-tech-border hover:border-tech-accent text-tech-accent w-9 h-9 flex items-center justify-center">
+                    <i class="fa-solid fa-sun hidden" id="icon-light-mobile"></i>
+                    <i class="fa-solid fa-moon"       id="icon-dark-mobile"></i>
+                </button>
+                <button id="mobile-menu-btn" class="p-2 rounded text-tech-text hover:text-tech-accent transition-colors" aria-label="Menu">
+                    <i class="fa-solid fa-bars  text-xl"        id="hamburger-icon"></i>
+                    <i class="fa-solid fa-xmark text-xl hidden" id="close-icon"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Menu Mobile Déroulant -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-tech-border bg-tech-bg/95 backdrop-blur-md">
+        <div class="px-4 py-4 space-y-1 font-mono text-sm">
+            <a href="index.php#home"       class="flex items-center gap-3 px-3 py-2 rounded hover:bg-tech-card <?php echo nav_link_class('index.php',    $current_page); ?>">
+                <i class="fa-solid fa-house         w-4 text-center text-tech-accent"></i> Accueil
+            </a>
+            <a href="index.php#skills"     class="flex items-center gap-3 px-3 py-2 rounded hover:bg-tech-card <?php echo nav_link_class('index.php',    $current_page); ?>">
+                <i class="fa-solid fa-microchip     w-4 text-center text-tech-accent"></i> Compétences
+            </a>
+            <a href="index.php#experience" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-tech-card <?php echo nav_link_class('index.php',    $current_page); ?>">
+                <i class="fa-solid fa-briefcase     w-4 text-center text-tech-accent"></i> Expérience
+            </a>
+            <a href="projects.php"         class="flex items-center gap-3 px-3 py-2 rounded hover:bg-tech-card <?php echo nav_link_class('projects.php', $current_page); ?>">
+                <i class="fa-solid fa-folder-open   w-4 text-center text-tech-accent"></i> Projets
+            </a>
+            <a href="index.php#contact"    class="flex items-center gap-3 px-3 py-2 rounded hover:bg-tech-card <?php echo nav_link_class('index.php',    $current_page); ?>">
+                <i class="fa-solid fa-envelope      w-4 text-center text-tech-accent"></i> Contact
+            </a>
         </div>
     </div>
 </nav>
 
-<!-- Script de gestion du thème -->
 <script>
-    const html = document.documentElement;
-    const themeBtn = document.getElementById('theme-toggle');
-    const iconSun = document.getElementById('icon-light');
-    const iconMoon = document.getElementById('icon-dark');
-
+    // ─── Thème ───────────────────────────────────────────────────────────────
+    const html       = document.documentElement;
     const savedTheme = localStorage.getItem('theme');
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (savedTheme === 'light' || (!savedTheme && !systemDark)) {
-        html.setAttribute('data-theme', 'light');
-        iconSun.classList.remove('hidden');
-        iconMoon.classList.add('hidden');
-    } else {
-        html.setAttribute('data-theme', 'dark');
-        iconSun.classList.add('hidden');
-        iconMoon.classList.remove('hidden');
+    function applyTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        const isDark = theme === 'dark';
+        document.getElementById('icon-light')?.classList.toggle('hidden', isDark);
+        document.getElementById('icon-dark')?.classList.toggle('hidden', !isDark);
+        document.getElementById('icon-light-mobile')?.classList.toggle('hidden', isDark);
+        document.getElementById('icon-dark-mobile')?.classList.toggle('hidden', !isDark);
     }
 
-    themeBtn.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(savedTheme ?? (systemDark ? 'dark' : 'light'));
 
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+    document.getElementById('theme-toggle')?.addEventListener('click', () =>
+        applyTheme(html.getAttribute('data-theme') === 'light' ? 'dark' : 'light'));
+    document.getElementById('theme-toggle-mobile')?.addEventListener('click', () =>
+        applyTheme(html.getAttribute('data-theme') === 'light' ? 'dark' : 'light'));
 
-        iconSun.classList.toggle('hidden');
-        iconMoon.classList.toggle('hidden');
+    // ─── Menu Hamburger ──────────────────────────────────────────────────────
+    const mobileMenu    = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon     = document.getElementById('close-icon');
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', isOpen);
+        hamburgerIcon.classList.toggle('hidden', !isOpen);
+        closeIcon.classList.toggle('hidden', isOpen);
     });
+
+    // Fermer au clic sur un lien mobile
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    }));
+
 </script>
